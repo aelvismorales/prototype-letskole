@@ -1,0 +1,200 @@
+#logo{
+    display: flex;
+    justify-content: center;
+}
+
+#logo img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+#logo a{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding-top: 5%;
+}
+
+
+.img-index {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;  
+}
+
+.img-index img{
+    max-width: 100%;
+    width: 100%;
+    transition: 1s ease;
+}
+
+.img-index img:hover{
+    max-width: 100%;
+    width: 100%;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s ease;
+}
+
+/* prototype/login/i */
+
+.img-row{
+    display: flex;
+    justify-content: end;
+}
+
+.img-row img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding-top: 10%;
+    padding-right: 15%;
+    transition: 1s ease;
+    
+}
+.img-row img:hover{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding-top: 10%;
+    padding-right: 15%;
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    transition: 1s ease;
+    
+}
+
+@media (max-width:374px){
+    #logo img{
+        max-width: 106px;
+        max-height: 106px;
+    }
+
+    #logo a{
+        max-width: 32px;
+        max-height: 32px;
+    }
+    
+    .img-index img{
+        max-width: 106px;
+        max-height: 106px;
+    }
+    
+    .img-row img{
+        max-width: 106px;
+        max-height: 106px;
+    }
+}
+
+@media (min-width:375px){
+    #logo img{
+        max-width: 125px;
+        max-height: 125px;
+    }
+
+    #logo a{
+        max-width: 32px;
+        max-height: 32px;
+    }
+    
+    .img-index img{
+        max-width: 125px;
+        max-height: 125px;
+    }
+    
+    .img-row img{
+        max-width: 125px;
+        max-height: 125px;
+    }
+}
+
+@media (min-width:425px){
+    #logo img{
+        max-width: 141.6px;
+        max-height: 141.6px;
+    }
+
+    #logo a{
+        max-width: 48px;
+        max-height: 48px;
+    }
+    
+    .img-index img{
+        max-width: 141.6px;
+        max-height: 141.6px;
+    }
+    
+    .img-row img{
+        max-width: 141.6px;
+        max-height: 141.6px;
+    }
+}
+
+ @media (min-width:768px){
+    #logo img{
+        max-width: 256px;
+        max-height: 256px;
+    }
+    
+    #logo a{
+        max-width: 48px;
+        max-height: 48px;
+    }
+
+    .img-index img{
+        max-width: 256px;
+        max-height: 256px;
+    }
+    
+    .img-row img{
+        max-width: 256px;
+        max-height: 256px;
+    }
+}
+
+@media (min-width:1024px){
+    #logo img{
+        max-width: 341.3px;
+        max-height: 341.3px;
+    }
+    
+    #logo a{
+        max-width: 64px;
+        max-height: 64px;
+    }
+
+    .img-index img{
+        max-width: 341.3px;
+        max-height: 341.3px;
+    }
+    
+    .img-row img{
+        max-width: 341.3px;
+        max-height: 341.3px;
+    }
+}
+
+@media (min-width:1440px){
+    #logo img{
+        max-width: 480px;
+        max-height: 480px;
+    }
+    
+    #logo a{
+        max-width: 64px;
+        max-height: 64px;
+    }
+    
+    .img-index img{
+        max-width: 480px;
+        max-height: 480px;
+    }
+    
+    .img-row img{
+        max-width: 480px;
+        max-height: 480px;
+    }
+}  

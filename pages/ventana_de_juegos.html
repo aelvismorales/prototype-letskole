@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventana de juegos</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/ventana_de_juegos.css">
+    <link rel="stylesheet" href="../css/opciones_usuario.css">
+</head>
+<body class="juegos-body">
+    <!--INICIO HEADER-->
+    
+    <div class="header">
+        <div class="brand">
+          <h1 class="brand-name">LET SKOLE</h1>
+          <p>Plataforma Educativa</p>
+        </div>
+        <div class="header-boy">
+            <p class="user-name">Juan Flores Rodriguez</p>
+            <div class="dropdown">
+                <img class="boy-img" src="../img/boy_256.png" alt="Perfil">
+                <div class="dropdown-content">
+                <ul class="header-opciones">
+                    <li>
+                        <img class="img-b"src="../img/boy.png">
+                    </li>
+                    <li>
+                        <p>Alfonso</p>
+                    </li>
+                    <li>
+                        <img class="img-b" src="../img/right-arrow.png" width=65 height=60 onclick="history.back()">
+                    </li>
+                </ul>
+                <hr>
+                <ul class="body-opciones-usuario">
+                    <li>
+                        <p class="p-list">Mi avatar</p>
+                        <a href="../pages/avatar.html">
+                            <img class="img-list" src="../img/hombre.png" width=90 height=90>
+                        </a> 
+                    </li>
+                    <li>
+                        <p class="p-list">Mis Logros</p>
+                        <a href="./ventana-de-logros.html">
+                            <img class="img-list" src="../img/logro.png" width=90 height=90>
+                        </a>
+                    </li>
+                    <li>
+                        <p class="p-list">Cerrar Sesion</p>
+                        <a href="../pages/login.html">
+                            <img class="img-list" src="../img/log-out.png" width=90 height=90>
+                        </a>    
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class = "linea">
+    <!--FIN HEADER-->
+
+    <div class="second-card">
+        <h2>Juegos</h2>
+        <!-- Default Games -->
+        <ul class="row no-list">
+            <li class="col-md-6 col-12" style="padding-top: 0px; padding-bottom: 0px;">
+                <div class="card-flat">
+                    <a class="row" href="./pantalla_de_juego.html" style="text-decoration: none;">
+                        <div class="col-9">
+                            <strong>Divisiones</strong>
+                            <p><strong>Curso:</strong> Matemáticas</p>
+                            <p><strong>Grado:</strong> 4er grado</p>
+                        </div>
+                        <img class="col-3 game-img-big" src="../img/matematicas.png" alt="matemáticas">
+                    </a>
+                </div>
+            </li>
+            <li class="col-md-6 col-12" style="padding-top: 0px; padding-bottom: 0px;">
+                <div class="card-flat">
+                    <a class="row" href="./pantalla_juego_favoritos.html" style="text-decoration: none;">
+                        <div class="col-9">
+                            <strong style="font-size: 20px;">Multiplicaciones</strong>
+                            <p><strong>Curso:</strong> Matemáticas</p>
+                            <p><strong>Grado:</strong> 5er grado</p>
+                        </div>
+                        <img class="col-3 game-img-big" src="../img/matematicas.png" alt="matemáticas">
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <!-- Main content -->
+        <ul class="row no-list">
+            <li class="col-md-3 col-6 option-game">
+                <div class="card-game">
+                    <a href="./menu_juegos_favoritos.html">
+                        <img class="game-img-big" src="../img/juegos-de-mesa (1).png" alt="juegos-de-mesa">
+                        <h3>Mis favoritos</h3>
+                    </a>    
+                </div>
+            </li>
+            <li class="col-md-3 col-6 option-game">
+                <div class="card-game">
+                    <a href="#">
+                        <img class="game-img-big" src="../img/juegos-de-mesa.png" alt="juegos-de-mesa">
+                        <h3>En estreno</h3>
+                    </a>
+                </div>
+            </li>
+            <li class="col-md-3 col-6 option-game">
+                <div class="card-game">
+                    <a href="./busqueda_de_juegos.html">
+                        <img class="game-img-big" src="../img/explorador.png" alt="gramatica">
+                        <h3>Explorar</h3>
+                    </a>
+                </div>
+            </li>
+            <li class="col-md-3 col-6 option-game">
+                <div class="card-game">
+                    <a href="#">
+                        <img class="game-img-big" src="../img/patio-de-recreo.png" alt="inca">
+                        <h3>Jugar más tarde</h3>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    
+        <div class="bottom-button">
+            <a class="button-a-small button-regresar" href="./iniciar_sesion_alumno.html">Regresar</a>
+        </div>
+    </div>
+</body>
+</html>

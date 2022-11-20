@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale=1>
+        <title>LetSkole</title>
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/grid.css">
+        <link rel="stylesheet" href="../css/inicio_sesion.css">
+        <link rel="stylesheet" href="../css/opciones_usuario.css">
+    </head>
+    <body class="inicio-sesion-body">
+        <!--INICIO HEADER-->
+        <div class="header">
+            <div class="brand">
+              <h1 class="brand-name">LET SKOLE</h1>
+              <p>Plataforma Educativa</p>
+            </div>
+            <div class="header-boy">
+                <p class="user-name">Juan Flores Rodriguez</p>
+                <div class="dropdown">
+                  <img class="boy-img" src="../img/boy_256.png" alt="Perfil">
+                  <div class="dropdown-content">
+                    <ul class="header-opciones">
+                      <li>
+                          <img class="img-b"src="../img/boy.png">
+                      </li>
+                      <li>
+                          <p>Alfonso</p>
+                      </li>
+                      <li>
+                          <img class="img-b" src="../img/right-arrow.png" width=65 height=60 onclick="history.back()">
+                      </li>
+                  </ul>
+                  <hr>
+                  <ul class="body-opciones-usuario">
+                      <li>
+                          <p class="p-list">Mi avatar</p>
+                          <a href="../pages/avatar.html">
+                              <img class="img-list" src="../img/hombre.png" width=90 height=90>
+                          </a> 
+                      </li>
+                      <li>
+                          <p class="p-list">Mis Logros</p>
+                          <a href="./ventana-de-logros.html">
+                              <img class="img-list" src="../img/logro.png" width=90 height=90>
+                          </a>
+                      </li>
+                      <li>
+                          <p class="p-list">Cerrar Sesion</p>
+                          <a href="../pages/login.html">
+                              <img class="img-list" src="../img/log-out.png" width=90 height=90>
+                          </a>    
+                      </li>
+                  </ul>
+                  </div>
+                </div>
+            </div>
+        </div>
+        
+        <hr class = "linea">
+        <!--FIN HEADER-->
+        
+        <div class="second-card">
+          <!-- BODY -->
+          <h2>Noticias</h2>
+          <ul class="row no-list">
+            <li class="col-md-4">
+              <div id="card-news1" class="row">
+                <p class="texto-noticia col-8">Lanzamiento de nuevo juego de figuras geometricas.</p>
+                <div class="contenido-noticia col-4">
+                  <a href="./pantalla_de_juego.html" style="text-decoration: none;">
+                      <img class="game-img" src="../img/jigsaw_512.png" alt="rompecabezas">
+                      <p class="subnombre">Jugar</p>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="col-md-4">
+              <div id="card-news2" class="row">
+                <p class="texto-noticia col-8">Lanzamiento de video juego de figuras geometricas.</p>
+                <div class="contenido-noticia col-4">
+                  <a href="./pantalla_de_video.html" style="text-decoration: none;">
+                      <img class="game-img" src="../img/video_512.png" alt="video">
+                      <p class="subnombre">Ver</p>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <h2>Secciones:</h2>
+          <ul class="row no-list">
+            <li class="col-md-3 col-6">
+              <a href="./ventana_de_juegos.html">
+                <img class="game-img-big" src="../img/jigsaw_512.png" alt="juego">
+              </a>
+              <p class="subnombre"> <strong>Juegos</strong></p>
+            </li>
+          
+            <li class="col-md-3 col-6">
+              <a href="./ventana_de_videos.html">
+                <img class="game-img-big" src="../img/video_512.png" alt="video">
+              </a>
+              <p class="subnombre"><strong>Videos</strong></p>
+            </li>
+          </ul> 
+        </div>
+       
+    </body>
+</html>

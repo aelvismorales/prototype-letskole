@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width", initial-scale=1.0>
+        <title>LetSkole</title>
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/grid.css">
+        <link rel="stylesheet" href="../css/registrarse.css">
+    </head>
+    <body>
+        <div class="main-card">
+            <div style="display: flex; justify-content: space-around;">
+              <div id="arrow"> 
+                <a class="arrow arrow-back"  href="./login.html"><img class="arrow-left-img"  src="../img/right-arrow.png"><a>
+              </div>
+              <div class="title">
+                  <h2 class="size1">Métodos de Pago</h2>
+                  
+              </div>
+            </div>
+            
+            <div class="form">
+                <form action="">
+                    <label>Registrarse como:</label>
+                    
+                    <div class="row">
+                      <div class="col-12 col-sm-12 col-md-12">
+                        <label>Numero de Tarjeta:</label>
+                        <input class="input-text input-registrarse" type="text" id="nombre" name="nombre">
+                      </div>
+                      <div class="col-12 col-sm-12 col-md-12">
+                        <label>Tipo de Tarjeta:</label>
+                        <ul class="row no-list">    
+                          <li class="col-6"><a href="#" class="button-a-small btn-register-as">Crédito</a></li>
+                          <li class="col-6"><a href="#" class="button-a-small btn-register-as">Débito</a></li>    
+                        </ul>
+                      </div>
+                      
+                      <div class="col-12 col-sm-12 col-md-12">
+                        <label> Titular de la  Tarjeta:</label>
+                        <input class="input-text input-registrarse" type="text" id="usuario" name="usuario">
+                      </div>
+                      <div class="col-12 col-sm-12 col-md-12">
+                        <label> Fecha de vencimiento:</label>
+                        <input class="input-text input-registrarse" type="text" id="usuario" name="usuario">
+                      </div>
+                      <div class="col-12 col-sm-12 col-md-12">
+                        <label> CCV:</label>
+                        <input class="input-text input-registrarse" type="text" id="correo" name="correo">
+                      </div>
+                      <div class="col-12 col-sm-12 col-md-12">
+                        <label> Correo para el recibo:</label>
+                        <input class="input-text input-registrarse" type="password" id="contraseña" name="contraseña">
+                      </div>
+                
+                      <ul class="row no-list">                
+                        <li class="col-6">
+                        <a id="btn-registrarse" class="button-a-small" href="./pago_confirmado.html">
+                            Subscribirse
+                            <!-- <input class="button" type="submit" style="background-color: #9B77FF; color:white;" value="Registrarse"> -->
+                        </a>
+                        <li>
+                            
+                        <li class="col-6">
+                        <a id="btn-cancelar" class="button-a-small" href="./ventana_de_subscripciones.html">
+                            Cancelar
+                            <!-- <input class="button" type="button" style="background-color: rgba(155, 119, 255, 0.49);" value="Cancelar"> -->
+                        </a>
+                        </li>
+                      </ul>  
+    
+                    </div>        
+                </form>
+            </div>
+        </div> 
+    </body>
+</html>

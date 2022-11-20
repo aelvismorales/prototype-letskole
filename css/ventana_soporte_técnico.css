@@ -1,0 +1,28 @@
+.texto{
+    text-align: justify;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#btn-enviar {
+    color: white;
+    background-color: rgba(0, 214, 201, 0.9);
+}
+
+#btn-cancelar{
+    color:black;
+    background-color: rgba(0, 214, 201, 0.1); 
+}
+
+.input-registrarse {
+    background-color: rgba(0, 214, 201, 0.15);
+    margin: 3px;
+    width: auto;
+}
+
+#Descripcion{
+    background-color: rgba(0, 214, 201, 0.15);
+    margin: 3px;
+}
+

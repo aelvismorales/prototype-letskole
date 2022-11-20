@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width", initial-scale=1.0>
+        <title>LetSkole</title>
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/grid.css">
+        <link rel="stylesheet" href="../css/login.css">
+    </head>
+    <body class="login-body">
+      <div class="main-card">
+        <div style="display: flex;justify-content: space-around;">
+          
+          <a class="arrow arrow-back" href="./home.html"><img class="arrow-left-img" src="../img/right-arrow.png"></a>
+          
+          <div>
+            <img class="logo-img" src="../img/LOGO-LETSKOLE.png"  alt="LogoLetSkole">
+          </div>
+        </div>        
+        <div class="form">
+          <form action="">
+            <div>
+                <label >Usuario:</label>
+                <input class="input-text input-login" type="text" name="usuario" id="usuario">
+            </div>
+            <div>
+                <label> Contraseña:</label>
+                <input class="input-text input-login" type="password" name="Contraseña" id="Contraseña">
+            </div>
+            <div>
+                <input type="checkbox" name="conectado" id="conectado" checked>
+                <label for="conectado"> Mantenerme Conectado</label>
+            </div>
+            <ul class="row no-list" style="margin-top: 5vh;">
+               <li class="col-6">
+                 <a id="registrarse-btn" class="button-a" href="./registrarse.html">
+                    <p>Registrarse</p>
+                 </a>
+               </li>
+               <li class="col-6">
+                 <a id="iniciar-sesion-btn" class="button-a" href="./iniciar_sesion_alumno.html">
+                    <p>Iniciar Sesión</p>
+                    <!-- <input type="submit" value="Iniciar Sesion" style="background-color: inherit; border: none;"> -->
+                 </a>
+               </li>
+            </ul>
+          </form>
+        </div>
+      </div>
+    </body>
+</html>

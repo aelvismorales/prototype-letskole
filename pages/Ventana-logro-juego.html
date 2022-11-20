@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos favoritos</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/inicio_sesion.css">
+    <link rel="stylesheet" href="../css/ventana_de_juegos.css">
+    <link rel="stylesheet" href="../css/opciones_usuario.css">
+    <link rel="stylesheet" href="../css/ventana-logro.css">
+</head>
+<body>
+    
+
+    <!--INICIO HEADER-->
+    <div class="header">
+        <div class="brand">
+          <h2 class="brand-name">LET SKOLE</h2>
+          <p>Plataforma Educativa</p>
+        </div>
+        <div class="header-boy">
+            <p class="user-name">Juan Flores Rodriguez</p>
+            <div class="dropdown">
+                <img class="boy-img" src="../img/boy_256.png" alt="Perfil">
+                <div class="dropdown-content">
+                <ul class="header-opciones">
+                    <li>
+                        <img class="img-b"src="../img/boy.png">
+                    </li>
+                    <li>
+                        <p>Alfonso</p>
+                    </li>
+                    <li>
+                        <img class="img-b" src="../img/right-arrow.png" width=65 height=60 onclick="history.back()">
+                    </li>
+                </ul>
+                <hr>
+                <ul class="body-opciones-usuario">
+                    <li>
+                        <p class="p-list">Mi avatar</p>
+                        <a href="../pages/avatar.html">
+                            <img class="img-list" src="../img/hombre.png" width=90 height=90>
+                        </a> 
+                    </li>
+                    <li>
+                        <p class="p-list">Mis Logros</p>
+                        <a href="./ventana-de-logros.html">
+                            <img class="img-list" src="../img/logro.png" width=90 height=90>
+                        </a>
+                    </li>
+                    <li>
+                        <p class="p-list">Cerrar Sesion</p>
+                        <a href="../pages/login.html">
+                            <img class="img-list" src="../img/log-out.png" width=90 height=90>
+                        </a>    
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class = "linea">
+    <!--FIN HEADER-->
+    <div class="second-card">
+        <!-- BODY -->
+        <h2>Multiplicaciones</h2>
+        <ul class="row no-list">
+          <li class="col-md-4">
+            <div  class="row">
+              <p class="texto-noticia col-8">¡Finalizaste el juego de multiplicaciones!</p>
+              <div class="contenido-noticia col-4">
+                <a href="./pantalla_de_juego.html" style="text-decoration: none;">
+                    <img class="game-img" src="../img/finish-line.png" alt="Logro">
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="col-md-4">
+            <div  class="row">
+              <p class="texto-noticia col-8">¡Completaste el juego de multiplicaciones sin ningún error, victoria perfecta!</p>
+              <div class="contenido-noticia col-4">
+                <a href="./pantalla_de_video.html" style="text-decoration: none;">
+                    <img class="game-img" src="../img/mind.png" alt="Logro">                   
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div>
+            <a href="./ventana-de-logros.html" style="text-decoration: none;">
+                <button class="btn-regresar" type="button">Regresar</button>
+            </a>
+        </div>
+    </div>
+
+     
+
+    
+    
+</body>
+</html>

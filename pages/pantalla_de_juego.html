@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letskole</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/pantalla_de_juego.css">
+    <link rel="stylesheet" href="../css/opciones_usuario.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <script>
+
+        let timeLeft = 60;
+        let timerInterval;
+        let scoreCorrect = 0;
+        let scoreWrong = 0;
+        let correctAnswer = 0;
+
+        window.onload = function () {
+            document.getElementById("btn1").disabled = true;
+            document.getElementById("btn2").disabled = true;
+            document.getElementById("btn3").disabled = true;
+            document.getElementById("btn4").disabled = true;
+        }
+
+        function startGame() {
+
+            timeLeft = 60;
+            timerInterval;
+            scoreCorrect = 0;
+            scoreWrong = 0;
+            correctAnswer = 0;
+            
+            document.getElementById("btn1").disabled = false;
+            document.getElementById("btn2").disabled = false;
+            document.getElementById("btn3").disabled = false;
+            document.getElementById("btn4").disabled = false;
+            
+            nextQuestion();
+            document.getElementById("startBtn").disabled=true;
+
+            let timeDisplay = document.getElementById("timeDisplay");
+            timeDisplay.hidden = false;
+
+            
+            timerInterval = setInterval(function(){
+                timeLeft -= 1;
+                timeDisplay.innerHTML = "Tiempo restante: " + timeLeft; 
+                if(timeLeft == 0) {
+                    clearInterval(timerInterval);
+                    document.getElementById("startBtn").disabled=false;
+        
+                    document.getElementById("btn1").disabled = true;
+                    document.getElementById("btn2").disabled = true;
+                    document.getElementById("btn3").disabled = true;
+                    document.getElementById("btn4").disabled = true;
+                }
+            }, 1000);
+        }
+
+        function nextQuestion() {
+            let operationDiv = document.getElementById("operation");
+            let firstNum = Math.ceil(Math.random() * 12);
+            let secondNum = Math.ceil(Math.random() * 12);
+            correctAnswer = firstNum * secondNum;
+            operationDiv.innerHTML = firstNum + " x " + secondNum;
+            
+            // Set the buttons to have random answer and one should be the
+            // correct answer
+            let random_numbers = [correctAnswer];
+
+            function choiceDifferentNumber(random_numbers) {
+                for(let i = 0; i < 4; i++){
+
+                    var find_number = false;
+                    while(!find_number) {
+                        let num = Math.ceil(Math.random() * 144);
+                        let valid = true;
+                        for(let i = 0; i < random_numbers.Length; i++){
+                            if(num == random_numbers[i]){
+                                valid = false;
+                            }
+                        }
+                        if(valid == true) {
+                            find_number = true;
+                            random_numbers.push(num);
+                        }
+                    }
+                }
+                return random_numbers;
+            }
+            console.log(random_numbers);
+            random_numbers = choiceDifferentNumber(random_numbers);
+            console.log(random_numbers);
+            document.getElementById("btn1").innerHTML = random_numbers[1];
+            document.getElementById("btn2").innerHTML = random_numbers[2];
+            document.getElementById("btn3").innerHTML = random_numbers[3];
+            document.getElementById("btn4").innerHTML = random_numbers[4];
+            
+            let correctAnswerIndex = Math.floor(Math.random()*4) + 1; // 1 2 3 4
+            let correctAnswerID = "btn" + correctAnswerIndex;
+            document.getElementById(correctAnswerID).innerHTML = correctAnswer;
+
+        }
+
+        function checkAnswer(buttonIndex) {
+            let answer = document.getElementById("btn"+buttonIndex).innerHTML;
+            if (answer == correctAnswer) scoreCorrect += 1;
+            else scoreWrong += 1;
+            
+            document.getElementById("scoreCorrect").innerHTML = "Respuestas correctas: " + scoreCorrect;
+            document.getElementById("scoreWrong").innerHTML = "Respuestas incorrectas: " + scoreWrong;
+            
+            nextQuestion();
+        }
+    </script>
+</head>
+<body>
+    <!--INICIO HEADER-->
+    <div class="header">
+        <div class="brand">
+          <h2 class="brand-name">LET SKOLE</h2>
+          <p>Plataforma Educativa</p>
+        </div>
+        <div class="header-boy">
+            <p class="user-name">Juan Flores Rodriguez</p>
+            <div class="dropdown">
+                <img class="boy-img" src="../img/boy_256.png" alt="Perfil">
+                <div class="dropdown-content">
+                <ul class="header-opciones">
+                    <li>
+                        <img class="img-b"src="../img/boy.png">
+                    </li>
+                    <li>
+                        <p>Alfonso</p>
+                    </li>
+                    <li>
+                        <img class="img-b" src="../img/right-arrow.png" width=65 height=60 onclick="history.back()">
+                    </li>
+                </ul>
+                <hr>
+                <ul class="body-opciones-usuario">
+                    <li>
+                        <p class="p-list">Mi avatar</p>
+                        <a href="../pages/avatar.html">
+                            <img class="img-list" src="../img/hombre.png" width=90 height=90>
+                        </a> 
+                    </li>
+                    <li>
+                        <p class="p-list">Mis Logros</p>
+                        <a href="./ventana-de-logros.html">
+                            <img class="img-list" src="../img/logro.png" width=90 height=90>
+                        </a>
+                    </li>
+                    <li>
+                        <p class="p-list">Cerrar Sesion</p>
+                        <a href="../pages/login.html">
+                            <img class="img-list" src="../img/log-out.png" width=90 height=90>
+                        </a>    
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="linea">
+    <!--FIN HEADER-->
+
+    <!-- The Modal Favoritos -->
+    <div id="myModalFavoritos" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <img src="../img/favorito.png"  class="game-img-big" alt="favoritos">
+            <p>SE HA AGREGADO A TUS FAVORITOS</p>
+            <button class="btn-back">Regresar</button>
+        </div>
+    </div>
+
+    <!-- The Modal Compartir -->
+    <div id="myModalCompartir" class="modal">        
+        <!-- Modal content -->
+        <div class="modal-content">
+            <img src="../img/matematicas.png"  class="game-img-big" alt="favoritos">
+            <p style="font-size: 10px;">Multiplicaciones</p>
+            <p>Comparte el juego con tus amigos, solo copian do el siguiente link:</p>
+            <p class="link-compartir">letskole/compartir/multiplicaciones<button><img src="../img/copy.png" width="15" height="15"></button></p>
+            <button class="btn-back">Regresar</button>
+        </div>
+    </div>
+
+    <div class="second-card">
+        <!-- Main content -->
+        <h3>Multiplicar</h3>
+        <div class="row">
+            <!-- Game was modified from (Mr. Soderquist): https://www.youtube.com/watch?v=lrInxLh4Hyg -->
+            <div class="col-12 col-md-7 pantalla-juego">
+                <ul class="row no-list">
+                    <li class="col-3"><button id="startBtn" onclick="startGame()">Inicio</button></li>
+                    <li id="scoreCorrect" class="col-3">Respuestas correctas: 0</li>
+                    <li id="scoreWrong" class="col-3">Respuestas incorrectas: 0</li>
+                    <li id="timeDisplay" class="col-3" hidden>Tiempo restante: 60</li>
+                </ul>
+                <h4>¿Cuál es la respuesta correcta?</h4>
+                <div class="row">
+                    <div id="operation" class="col-3 big">
+                        0 x 0
+                    </div>
+                    <div class="col-9 row">
+                        <button class="col-3" onClick="checkAnswer(1)" id="btn1">0</button>
+                        <button class="col-3" onClick="checkAnswer(2)" id="btn2">0</button>
+
+                        <button class="col-3" onClick="checkAnswer(3)" id="btn3">0</button>
+                        <button class="col-3" onClick="checkAnswer(4)" id="btn4">0</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-5">
+                <p><label for="notas">Notas</label></p>
+                <p><textarea id="notas" rows="5" cols="40" style="resize: none; padding: 5px;"></textarea></p>
+                <button class="btn-save">Guardar</button>
+            </div>
+        </div>
+        <!--REPORTAR / COMPARTIR-->
+        <ul class="row no-list">
+            <li class="col-6" style="padding-top: 0px; padding-bottom: 0px;">
+                <a href="Juego_Reportado_Reportar.html" class="btn-reportar">Reportar</a>
+            </li>
+            <li class="col-6" style="padding-top: 0px; padding-bottom: 0px;">
+                <button id="myBtnCompartir" class="btn-compartir">
+                    Compartir
+                </button>
+            </li>
+        </ul>
+        <!--FIN COMPARTIR-->
+
+        <!--LOGROS-->    
+        <h3 class = "titulo-logro"> Logros</h3>
+        <ul class="row no-list">
+            <li class="col-6 col-md-3">
+                <img class= "img-logro" src="../img/finish-line.png" alt="Completar Juego">
+                <p class="nombre-logro"> Finalizar el juego</p>
+                <p class="info-logro"> Gana el juego</p>
+            </li>
+            <li class="col-6 col-md-3">
+                <img class= "img-logro" src="../img/mind.png" alt="Completar Juego">
+                <p class="nombre-logro"> Perfecto</p>
+                <p class="info-logro"> Gana el juego sin equivocarte</p>
+            </li>
+            <li class="col-6 col-md-3">
+                <img class= "img-calificar" src="../img/dislike.png" alt="dislike">
+                <button class="btn-calificar" type="button"> No me gusta</button>
+            </li>
+            <li class="col-6 col-md-3">
+                <img class= "img-calificar" src="../img/like.png" alt="like">
+                <button class="btn-calificar" type="button"> Me gusta</button>
+            </li>
+        </ul>   
+        <!--FIN LOGROS-->
+
+        <!--FAVORITOS-->
+        <div>
+            <!-- <a href = "./pantalla_juego_favoritos.html" style="text-decoration: none;"> -->
+            <a style="text-decoration: none;">
+                <img class= "img-favorito" src="../img/favorito.png" alt="favorito" style="border: red;">
+                <button id="myBtnFavoritos" class="btn-favorito"> Añadir a favoritos</button>
+            </a>
+            
+        </div>
+        <!--FIN FAVORITOS-->
+
+        <!--REGRESAR-->
+        <a href="./iniciar_sesion_alumno.html" style="text-decoration: none;">
+            <button class="btn-regresar" type="button">Regresar</button>
+        </a>
+        
+        <!--FIN REGRESAR-->
+    </div>
+
+    <script>
+        // Get the modal
+        var modalFavoritos = document.getElementById("myModalFavoritos");
+        var modalCompartir = document.getElementById("myModalCompartir");
+
+        // Get the button that opens the Modal
+        var btnFavoritos = document.getElementById("myBtnFavoritos");
+        var btnCompartir = document.getElementById("myBtnCompartir");
+
+        // Get the <span> element that closes the modal
+        var span0 = document.getElementsByClassName("btn-back")[0];
+        var span1 = document.getElementsByClassName("btn-back")[1];
+
+
+        // When the user clicks the button, open the modal Favoritos
+        btnFavoritos.onclick = function() {
+            modalFavoritos.style.display = "block";
+        }
+
+        // When the user clicks the button, open the modal Compartir
+        btnCompartir.onclick = function() {
+            modalCompartir.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span0.onclick = function() {
+            modalFavoritos.style.display = "none";
+        }
+        span1.onclick = function() {
+            modalCompartir.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        // window.onclick = function(event) {
+        //     if(event.target == modal) {
+        //         modal.style.display = "none";
+        //     }
+        // }
+    </script>
+
+</body>
+</html>

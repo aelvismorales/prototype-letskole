@@ -1,0 +1,131 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    
+} */
+
+
+/* body{
+    font-family: "Roboto",sans-serif;
+} */
+
+.card-game {
+    text-align: center;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.card-game:hover, .card-game:active {
+    box-shadow: 0px 0px 10px gray;
+}
+
+.card-flat {
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.card-flat:hover, .card-flat:active {
+    box-shadow: 0px 0px 10px gray;
+}
+
+.option-game {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+/*INICIO HEADER*/
+
+.nav{
+    height: 136px;
+    width: 100%;
+    top: 24px;
+    display: flex;
+    justify-content:center;
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    
+}
+
+.nav-list p{
+    padding-left: 25px;
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+
+    text-decoration: none;
+    color: #000000;
+    padding: 20px;
+    
+}
+
+.nav-list a img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 8px;
+}
+
+.boy{
+    position: absolute;
+    width: 73px;
+    height: 73px;
+    left: 75%;
+    top: 5%;
+}
+
+.plataforma{
+    left: 0%;
+    right: 51.86%;
+    top: 0%;
+    bottom: 0%;
+
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 25px;
+    
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+/*FIN HEADER*/
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenedor > div {
+    margin: 10;
+    width: 180px;
+    text-align: center;
+}
+
+.button-container {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+}
+.button {
+    background-color: rgba(211, 196, 255, 0.53);
+    padding: 5px;
+}
+
+@media (max-width: 767px) {
+    .juegos-body{
+        background-color: white;
+    }
+    .option-game {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}

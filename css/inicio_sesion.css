@@ -1,0 +1,62 @@
+body{
+    font-family: "Roboto",sans-serif;
+}
+
+
+#card-news1 {
+    background-color: rgba(0,214,201,0.15);
+    padding: 15px;
+}
+
+#card-news2 {
+    background-color: rgba(211,195,255,0.53);
+    padding: 15px;
+}
+
+.clearfix{
+    background-color: rgba(0,214,201,0.15);
+    display: flex;
+    justify-content: space-between;
+}
+.clearfix img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.clearfix-2{
+    background-color: rgba(211,195,255,0.53);
+    display: flex;
+    justify-content: space-between;
+}
+.clearfix-2 img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+
+.subnombre{
+    text-align: center;
+    font-weight: bold;
+}
+
+div.gallery{
+    display: flex ;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+  }
+
+div.gallery img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+
+@media (max-width: 767px) {
+    .inicio-sesion-body{
+        background-color: white;
+    }
+}
+

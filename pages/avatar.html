@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width", initial-scale=1.0>
+        <title>LetSkole</title>
+        <link rel="stylesheet" href="../css/avatar.css" />
+        <link rel="stylesheet"href="../css/grid.css"/>
+        <link rel="stylesheet"href="../css/main.css"/>
+        <link rel="stylesheet" href="../css/opciones_usuario.css">
+    </head>
+    <body class="avatar-body">
+
+        <!--INICIO HEADER-->
+        <div class="header">
+            <div class="brand">
+            <h1 class="brand-name">LET SKOLE</h1>
+            <p>Plataforma Educativa</p>
+            </div>
+            <div class="header-boy">
+                <p class="user-name">Juan Flores Rodriguez</p>
+                <div class="dropdown">
+                    <img class="boy-img" src="../img/boy_256.png" alt="Perfil">
+                    <div class="dropdown-content">
+                    <ul class="header-opciones">
+                        <li>
+                            <img class="img-b"src="../img/boy.png">
+                        </li>
+                        <li>
+                            <p>Alfonso</p>
+                        </li>
+                        <li>
+                            <img class="img-b" src="../img/right-arrow.png" width=65 height=60 onclick="history.back()">
+                        </li>
+                    </ul>
+                    <hr>
+                    <ul class="body-opciones-usuario">
+                        <li>
+                            <p class="p-list">Mi avatar</p>
+                            <a href="../pages/avatar.html">
+                                <img class="img-list" src="../img/hombre.png" width=90 height=90>
+                            </a> 
+                        </li>
+                        <li>
+                            <p class="p-list">Mis Logros</p>
+                            <a href="./ventana-de-logros.html">
+                                <img class="img-list" src="../img/logro.png" width=90 height=90>
+                            </a>
+                        </li>
+                        <li>
+                            <p class="p-list">Cerrar Sesion</p>
+                            <a href="../pages/login.html">
+                                <img class="img-list" src="../img/log-out.png" width=90 height=90>
+                            </a>    
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-card">
+
+                <h2>Mi avatar</h2>
+                <div style="text-align: center;">
+                    <img src="../img/boy.png" alt="boy">
+                </div>
+            
+                <div class="form row" id="form-registro">
+                    <div class="col-12 col-md-6">
+                        <label > Nombre:</label>
+                        <br>
+                        <input class="input-text" type="text" id="nombre" name="nombre">
+                    </div>    
+                    <div class="col-12 col-md-6">
+                        <label > Usuario:</label>
+                        <br>
+                        <input class="input-text" type="text" id="usuario" name="usuario">
+                    </div>    
+                    <div class="col-12 col-md-6">
+                        <label > Correo:</label>
+                        <br>
+                        <input class="input-text" type="text" id="correo" name="correo">
+                    </div> 
+                    <div class="col-12 col-md-6">
+                        <label > Grado:</label>
+                        <br>
+                        <input class="input-text" type="text" id="correo" name="correo">
+                    </div>    
+                    <div class="container-button col-12">                
+                        <a href="./iniciar_sesion_alumno.html">
+                            <input class="button" type="submit" value="Aceptar">
+                        </a>
+
+                        <a href="./iniciar_sesion_alumno.html">
+                            <input class="button" type="button"  value="Cancelar">
+                        </a>
+                    </div>  
+                </div>
+        </div>
+    
+        
+
+    </body>
+</html>

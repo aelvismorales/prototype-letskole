@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letskole</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/opciones_usuario.css">
+    <link rel="stylesheet" href="../css/ventana_soporte_técnico.css">
+</head>
+<body>
+    <!--INICIO HEADER-->
+    <div class="header">
+        <div class="brand">
+          <h2 class="brand-name">LET SKOLE</h2>
+          <p>Plataforma Educativa</p>
+        </div>
+        <div class="header-boy">
+            <p class="user-name">Juan Flores Rodriguez</p>
+            <div class="dropdown">
+                <img class="boy-img" src="../img/boy_256.png" alt="Perfil">
+                <div class="dropdown-content">
+                <ul class="header-opciones">
+                    <li>
+                        <img class="img-b"src="../img/boy.png">
+                    </li>
+                    <li>
+                        <p>Alfonso</p>
+                    </li>
+                    <li>
+                        <img class="img-b" src="../img/right-arrow.png" width=65 height=60 onclick="history.back()">
+                    </li>
+                </ul>
+                <hr>
+                <ul class="body-opciones-usuario">
+                    <li>
+                        <p class="p-list">Mi avatar</p>
+                        <a href="../pages/avatar.html">
+                            <img class="img-list" src="../img/hombre.png" width=90 height=90>
+                        </a> 
+                    </li>
+                    <li>
+                        <p class="p-list">Mis Logros</p>
+                        <a href="#">
+                            <img class="img-list" src="../img/logro.png" width=90 height=90>
+                        </a>
+                    </li>
+                    <li>
+                        <p class="p-list">Cerrar Sesion</p>
+                        <a href="../pages/login.html">
+                            <img class="img-list" src="../img/log-out.png" width=90 height=90>
+                        </a>    
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="linea">
+    <!--FIN HEADER-->
+
+    <div class="second-card">
+        <!--Texto/Intro de la sección-->
+        <h2 class="Titulo">Soporte Técnico</h2>
+        
+         <p class="texto"> Escribe en el formulario el problema que tuviste, pon tu correo electrónico 
+            y el equipo de soporte técnico se comunicará contigo lo más pronto posible</p>
+        
+        <!-- Formulario para llenar el problema -->
+        <div class="form">
+            <form action="">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12">
+                        <label>Correo:</label>
+                        <input class="input-text input-registrarse" type="text" id="nombre" name="nombre">
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12">
+                        <p><label for="Descripcion">Descripción del problema:</label></p>
+                        <p><textarea id="Descripcion" rows="5" cols="35" style="resize: none; padding: 5px;"></textarea></p>
+                    </div>
+                </div>
+                <ul class="row no-list">                
+                    <li class="col-6">
+                    <a id="btn-enviar" class="button-a-small" href="./Ventana_Problema_enviado.html">
+                        Enviar
+                        <!-- <input class="button" type="submit" style="background-color: #9B77FF; color:white;" value="Registrarse"> -->
+                    </a>
+                    <li>
+                        
+                    <li class="col-6">
+                    <a id="btn-cancelar" class="button-a-small" href="./iniciar_sesion_padre.html">
+                        Cancelar
+                        <!-- <input class="button" type="button" style="background-color: rgba(155, 119, 255, 0.49);" value="Cancelar"> -->
+                    </a>
+                    </li>
+                  </ul>  
+            </form>
+        </div>
+
+    </div>
+
+</body>

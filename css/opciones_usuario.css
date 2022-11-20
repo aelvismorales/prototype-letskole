@@ -1,0 +1,136 @@
+.header-opciones{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: space-around;
+    padding: 0;
+}
+.header-opciones li p{
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 400;
+    /* font-size: 30px; */
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+.body-opciones-usuario{
+    list-style: none;
+    display:flexbox; 
+    justify-content: space-around;
+}
+
+.body-opciones-usuario li{
+    display: flex; 
+    margin-bottom:20px;
+    justify-content: space-around; 
+}
+
+.body-opciones-usuario li p{
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 400;
+    /* font-size: 30px; */
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+.img-b, .img-list {
+    width: 30px;
+    height: 30px;
+}
+
+/* @media (max-width: 374px) {
+
+    .header-opciones{
+        gap: 35px;
+    }
+    .img-b{
+        width: 60px;
+        height: 60px;
+    }
+
+    .img-list{
+        width: 40px;
+        height: 40px;
+    }
+    .p-list{
+        width: 164.13px;
+        font-size: 20px;
+    }
+    .header-opciones li p{
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 375px) {
+
+    .header-opciones{
+        gap: 45px;
+    }
+    .img-b{
+        width: 70px;
+        height: 70px;
+    }
+    .img-list{
+        width: 60px;
+        height: 60px;
+    }
+    .p-list{
+        width: 164.13px;
+        font-size: 25px;
+    }
+    .header-opciones li p{
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 425px) {
+
+    .header-opciones{
+        gap: 55px;
+    }
+    .img-b{
+        width: 80px;
+        height: 80px;
+    }
+    .img-list{
+        width: 60px;
+        height: 60px;
+    }
+    .p-list{
+        width: 164.13px;
+        font-size: 25px;
+    }
+    .header-opciones li p{
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .header-opciones{
+        gap: 75px;
+    }
+    .img-b{
+        width: 110px;
+        height: 110px;
+    }
+    .img-list{
+        width: 90px;
+        height: 90px;
+    }
+    .p-list{
+        width: 250px;
+        font-size: 40px;
+    }
+    .header-opciones li p{
+        font-size: 40px;
+    }
+} */

@@ -18,5 +18,10 @@
 }
 
 .second-card {
-    height: auto;
+    height: 100vh;
+}
+
+.texto-noticia {
+    padding-top: 5px;
+    padding-bottom: 5px;
 }

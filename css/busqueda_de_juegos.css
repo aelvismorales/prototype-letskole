@@ -5,11 +5,11 @@
 
 body{
     font-family: "Roboto",sans-serif;
-    font-size: small;
 }
 
 p {
     text-align: center;
+    font-size: small;
 }
 
 .second-card {
@@ -113,6 +113,7 @@ p {
     display: inline-block;
     width: 100px;
     color: #000000;
+    font-size: small;
 }
 
 .contenedor {
